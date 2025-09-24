@@ -5,12 +5,16 @@ This project implements a deep learning algorithm in MATLAB to classify diabetic
 ## Overview
 
 - Classified diabetic retinopathy images into 5 severity classes using the IDRiD dataset (516 images).  
-- Retrained InceptionV3 multiple times and combined predictions across runs.  
+- Retrained InceptionV3 multiple times, summing predicted probabilities across runs to produce final classifications.  
 - Achieved over **90% accuracy** on the test set.  
 
 ## Project Files
 
-The full project, including MATLAB scripts and supporting files, is included in this repository.  
+- `main.m` – main MATLAB script for training and testing  
+- `scripts/` – supporting MATLAB functions   
+- `pdf/` – PDFs required to generate the report  
+- `workspace/default_WS.mat` – saved workspace file for using precomputed results  
+- `scripts/data/` – image dataset required for the CNN   
 
 For viewing the final report, please see the project page: [CS 7267 – Diabetic Retinopathy Project Page](https://trevorzimmerman.github.io/university/cs7267-diabetic-retinopathy)
 
@@ -29,8 +33,10 @@ For viewing the final report, please see the project page: [CS 7267 – Diabetic
 ### Output
 
 - If you choose **N**:  
-  - The report is generated as `Final_Report.pdf` in the working folder.  
+  - `Final_Report.pdf` is generated in the `src/` folder    
 
 - If you choose **Y**:  
-  - `Final_Report.pdf` is generated  
-  - `PredictionResults.xlsx` is generated with the updated probability matrix
+  - `Final_Report.pdf` is generated in the `src/` folder  
+  - `PredictionResults.xlsx` is generated in the `src/` folder
+
+> Note: If **N** is selected, pages 4–7 of the PDF are formatted for easy review. If **Y** is selected, the same data is provided in `PredictionResults.xlsx` without additional formatting.
