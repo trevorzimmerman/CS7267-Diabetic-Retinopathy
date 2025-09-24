@@ -28,6 +28,10 @@ close all;
 clear;
 clc;
 
+source = fileparts(mfilename('fullpath'));
+cd(source);
+addpath(genpath(source));
+
 response = question();
 
 if response == 1
